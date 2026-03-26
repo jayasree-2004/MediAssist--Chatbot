@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellCare Medical Center</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="Images/1.webp" width="80" height="80" alt="WellCare Medical Center">
+        <div class="logo-text">WellCare Medical Center</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <h1>Welcome to WellCare Medical Center</h1>
+            <p>Caring for Your Health</p>
+            <a href="#contact" class="button">Book an Appointment</a>
+        </div>
+    </section>
+    <section id="note">
+        <p class="note-text">If you need assistance, feel free to interact with our MediAssist chatbot. It will
+            automatically help you with scheduling appointments, answering health-related questions, and sending
+            reminders.</p>
+    </section>
+    <section id="about">
+        <h2>Our Mission</h2>
+        <p>To provide compassionate, high-quality healthcare services to our community, ensuring the well-being and
+            health of every patient.</p>
+        <h2>Our Core Values</h2>
+        <ul>
+            <li>Compassion</li>
+            <li>Integrity</li>
+            <li>Excellence</li>
+            <li>Innovation</li>
+            <li>Collaboration</li>
+        </ul>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>General Medicine</li>
+            <li>Pediatrics</li>
+            <li>Emergency Care</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit" class="button">Send</button>
+        </form>
+        <div class="contact-info">
+            <p>Phone: <a href="tel:+044-9989391919">044-9989391919</a></p>
+            <p>Email: <a href="mailto: WellCareMedicalCenter@gmail.com">WellCareMedicalCenter@gmail.com</a></p>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 WellCare Medical Center</p>
+    </footer>
+
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "8b6f9c34-903d-4759-828c-0d14baee1106", // The ID of this integration.
+            region: "eu-gb", // The region your integration is hosted in.
+            serviceInstanceID: "d198fe99-6c41-4c25-be9f-aabc010dfa70", // The ID of your service instance.
+            onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        });
+    </script>
+</body>
+
+</html>
